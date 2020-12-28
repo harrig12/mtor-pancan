@@ -36,3 +36,6 @@ TCGA-THCA	Thyroid Carcinoma	Thyroid carcinoma
 TCGA-UCS	Uterine Carcinosarcoma	Uterine Carcinosarcoma
 TCGA-UCEC	Endometrial Carcinoma	Uterine Corpus Endometrial Carcinoma
 TCGA-UVM	Uveal Melanoma	Uveal Melanoma
+PAEN-AU	PNETs (AU)	Pancreatic neuoendocrine (Australia)
+PAEN-IT	PNETs (IT)	Pancreatic neuoendocrine (Italy)
+PAEN-consensus	PNETs	Pancreatic neuoendocrine (PCAWG consensus)

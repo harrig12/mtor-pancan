@@ -1,9 +1,9 @@
 import os
 from glob import glob
 
-sample_set = "MC3-subtyped" #"harmonized" #"MC3"
+sample_set = "icgc_projects" #"harmonized" #"MC3"
 
-data_dir = os.path.join("gdcData", sample_set)
+data_dir = os.path.join("icgcData", sample_set)
 results_dir = os.path.join("results", sample_set)
 summary_dir = os.path.join("summary", sample_set)
 
@@ -18,7 +18,7 @@ rule knit_dash:
 	#input: expand("results/{set}/{job}.sig_genes.txt", set = sample_sets)
 	input: expand(os.path.join(results_dir, "{job}.sig_genes.txt"), job = get_jobnames(data_dir))
 	output: os.path.join(summary_dir, "index.html")
-	params: summary_dir, os.path.join("..", data_dir), os.path.join("..", results_dir), os.path.join("..", "ref_files", "cancer_subtypes.txt")
+	params: summary_dir, os.path.join("..", data_dir), os.path.join("..", results_dir), os.path.join("..", "ref_files", "cancer_types.txt")
 	shell: 
 		"""
 		Rscript -e "rmarkdown::render('scripts/dash.Rmd', output_file = '{output}', output_dir = '{params[0]}', params = list(maf_dir = '{params[1]}', res_dir = '{params[2]}', names_tr = '{params[3]}'))"
