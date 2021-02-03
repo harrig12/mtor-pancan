@@ -101,6 +101,7 @@ df <- as.data.frame(t(mutsig_p))
 sampleSizes <- sapply(mafs, function(x){as.numeric(x@summary[ID %in% 'Samples', summary])})
 mutRates <- sapply(mafs, function(x){getGeneSummary(x)[match(goi, getGeneSummary(x)$Hugo_Symbol), MutatedSamples]})
 mutRates <- as.data.frame(apply(mutRates, denom = sampleSizes, FUN = function(x, denom){ x / denom * 100}, MAR = 1))
+if(dim(mutRates)[2] == 1){mutRates <- mutRates %>% t() %>% as.data.frame()} # apply breaks when only one MAF
 colnames(mutRates) <- goi
 df$cancer_type <- cancer_names$brief[match(rownames(df), cancer_names$abbrev)]
 

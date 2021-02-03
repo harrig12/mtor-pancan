@@ -2,3 +2,4 @@ summary/harmonized/index.html filter=lfs diff=lfs merge=lfs -text
 summary/MC3/index.html filter=lfs diff=lfs merge=lfs -text
 summary/MC3-subtyped/index.html filter=lfs diff=lfs merge=lfs -text
 summary/icgc_projects/index.html filter=lfs diff=lfs merge=lfs -text
+summary/pcawg_consensus/index.html filter=lfs diff=lfs merge=lfs -text

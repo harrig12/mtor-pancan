@@ -1,7 +1,7 @@
 import os
 from glob import glob
 
-sample_set = "icgc_projects" #"harmonized" #"MC3"
+sample_set = "pcawg_consensus" #"harmonized" #"MC3"
 
 data_dir = os.path.join("icgcData", sample_set)
 results_dir = os.path.join("results", sample_set)
